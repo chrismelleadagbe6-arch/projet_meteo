@@ -1,5 +1,6 @@
 from meteo import Meteo
 from stockage import Stockage
+from geocodage import Geocodage
 
 
 def afficher_statistique(ville, donnees):
@@ -30,9 +31,25 @@ def main():
     while continuer:
 
        ville = input("\nEntrez le nom d'une ville: ")
-       latitude = float(input("Entrez la latitude de la ville: "))
-       longitude = float(input("Entrez la longitude de la ville: "))
 
+       reponse = input("Connaissez-vous la latitude et la longitude de cette ville ? (oui/non) : ")
+
+       if reponse.lower() == "oui" :
+          latitude = float(input("Entrez la latitude : "))
+          longitude = float(input("Entrez la longitude : "))
+
+       else:
+          print(f"Reherche automatique des coordonnées de {ville} ")
+          geo = Geocodage(ville)
+          latitude, longitude = geo.get_coordonnees()
+
+          if latitude is None:
+             print("La ville recherchée est introuvable, veuillez réessayer.")
+             continue
+          
+          print(f"Latitude trouvée : {latitude}")
+          print(f"Longitude trouvée : {longitude}")
+       
        # Récupérer les données météo
        meteo = Meteo(ville, latitude, longitude)
        donnees = meteo.recuperer_donnees()
