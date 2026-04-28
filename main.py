@@ -24,13 +24,25 @@ def main():
     """Fonction principale du programme."""
 
     print("=== Explorateur de Données Météo ===")
-
+    stockage = Stockage()
     continuer = True
     ville_consultees = []
 
     while continuer:
+       stockage.afficher_historique()
 
-       ville = input("\nEntrez le nom d'une ville: ")
+       ville = input("\nEntrez le nom d'une ville : ").strip()
+       if stockage.ville_existe(ville):
+          print(f"\n {ville} est déjà sauvegardée !")
+          reponse = input("Voulez-vous recharger depuis internet?")
+          if reponse.lower() == "non":
+             donnees = stockage.charger_ville(ville)
+             afficher_statistique(ville, donnees)
+             ville_consultees.append(ville)
+             reponse = input("\nVoulez-vous consulter une autre ? (oui/non) : ")
+             if reponse.lower() != "oui":
+                continuer = False
+                continue
 
        reponse = input("Connaissez-vous la latitude et la longitude de cette ville ? (oui/non) : ")
 
@@ -39,7 +51,7 @@ def main():
           longitude = float(input("Entrez la longitude : "))
 
        else:
-          print(f"Reherche automatique des coordonnées de {ville} ")
+          print(f"Recherche automatique des coordonnées de {ville} ")
           geo = Geocodage(ville)
           latitude, longitude = geo.get_coordonnees()
 

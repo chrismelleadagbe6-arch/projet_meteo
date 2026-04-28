@@ -2,49 +2,6 @@
     "Cotonou": {
         "latitude": 6.5,
         "longitude": 2.375,
-        "generationtime_ms": 0.03814697265625,
-        "utc_offset_seconds": 3600,
-        "timezone": "Africa/Porto-Novo",
-        "timezone_abbreviation": "GMT+1",
-        "elevation": 5.0,
-        "daily_units": {
-            "time": "iso8601",
-            "temperature_2m_max": "\u00b0C",
-            "temperature_2m_min": "\u00b0C"
-        },
-        "daily": {
-            "time": [
-                "2026-04-22",
-                "2026-04-23",
-                "2026-04-24",
-                "2026-04-25",
-                "2026-04-26",
-                "2026-04-27",
-                "2026-04-28"
-            ],
-            "temperature_2m_max": [
-                35.2,
-                34.0,
-                32.4,
-                32.2,
-                28.9,
-                32.2,
-                33.1
-            ],
-            "temperature_2m_min": [
-                25.8,
-                27.7,
-                27.2,
-                26.4,
-                26.0,
-                25.2,
-                25.9
-            ]
-        }
-    },
-    "Cotonou ": {
-        "latitude": 6.5,
-        "longitude": 2.375,
         "generationtime_ms": 0.04315376281738281,
         "utc_offset_seconds": 3600,
         "timezone": "Africa/Porto-Novo",
@@ -254,6 +211,350 @@
                 25.0,
                 24.3,
                 24.6
+            ]
+        }
+    },
+    "Bohicon": {
+        "latitude": 7.125,
+        "longitude": 2.125,
+        "generationtime_ms": 0.026941299438476562,
+        "utc_offset_seconds": 3600,
+        "timezone": "Africa/Porto-Novo",
+        "timezone_abbreviation": "GMT+1",
+        "elevation": 167.0,
+        "daily_units": {
+            "time": "iso8601",
+            "temperature_2m_max": "\u00b0C",
+            "temperature_2m_min": "\u00b0C"
+        },
+        "daily": {
+            "time": [
+                "2026-04-24",
+                "2026-04-25",
+                "2026-04-26",
+                "2026-04-27",
+                "2026-04-28",
+                "2026-04-29",
+                "2026-04-30"
+            ],
+            "temperature_2m_max": [
+                31.8,
+                32.6,
+                31.0,
+                34.0,
+                31.8,
+                31.4,
+                31.5
+            ],
+            "temperature_2m_min": [
+                25.4,
+                24.4,
+                24.4,
+                23.9,
+                24.5,
+                24.8,
+                24.3
+            ]
+        }
+    },
+    "Donwari": {
+        "latitude": 11.125,
+        "longitude": 2.875,
+        "generationtime_ms": 0.033020973205566406,
+        "utc_offset_seconds": 3600,
+        "timezone": "Africa/Porto-Novo",
+        "timezone_abbreviation": "GMT+1",
+        "elevation": 312.0,
+        "daily_units": {
+            "time": "iso8601",
+            "temperature_2m_max": "\u00b0C",
+            "temperature_2m_min": "\u00b0C"
+        },
+        "daily": {
+            "time": [
+                "2026-04-24",
+                "2026-04-25",
+                "2026-04-26",
+                "2026-04-27",
+                "2026-04-28",
+                "2026-04-29",
+                "2026-04-30"
+            ],
+            "temperature_2m_max": [
+                40.0,
+                37.6,
+                39.0,
+                38.6,
+                37.2,
+                38.6,
+                37.3
+            ],
+            "temperature_2m_min": [
+                27.9,
+                27.0,
+                27.3,
+                26.8,
+                27.5,
+                27.0,
+                27.8
+            ]
+        }
+    },
+    "Z\u00e8": {
+        "latitude": 6.75,
+        "longitude": 2.25,
+        "generationtime_ms": 0.13768672943115234,
+        "utc_offset_seconds": 3600,
+        "timezone": "Africa/Porto-Novo",
+        "timezone_abbreviation": "GMT+1",
+        "elevation": 40.0,
+        "daily_units": {
+            "time": "iso8601",
+            "temperature_2m_max": "\u00b0C",
+            "temperature_2m_min": "\u00b0C"
+        },
+        "daily": {
+            "time": [
+                "2026-04-24",
+                "2026-04-25",
+                "2026-04-26",
+                "2026-04-27",
+                "2026-04-28",
+                "2026-04-29",
+                "2026-04-30"
+            ],
+            "temperature_2m_max": [
+                32.0,
+                32.6,
+                31.4,
+                34.7,
+                31.8,
+                31.0,
+                31.9
+            ],
+            "temperature_2m_min": [
+                26.7,
+                25.4,
+                25.8,
+                25.1,
+                26.1,
+                26.2,
+                25.5
+            ]
+        }
+    },
+    "Abomey": {
+        "latitude": 7.205624,
+        "longitude": 1.9796954,
+        "generationtime_ms": 0.10323524475097656,
+        "utc_offset_seconds": 3600,
+        "timezone": "Africa/Porto-Novo",
+        "timezone_abbreviation": "GMT+1",
+        "elevation": 228.0,
+        "daily_units": {
+            "time": "iso8601",
+            "temperature_2m_max": "\u00b0C",
+            "temperature_2m_min": "\u00b0C"
+        },
+        "daily": {
+            "time": [
+                "2026-04-28",
+                "2026-04-29",
+                "2026-04-30",
+                "2026-05-01",
+                "2026-05-02",
+                "2026-05-03",
+                "2026-05-04"
+            ],
+            "temperature_2m_max": [
+                33.8,
+                34.2,
+                33.2,
+                34.0,
+                32.8,
+                33.3,
+                34.3
+            ],
+            "temperature_2m_min": [
+                24.5,
+                23.9,
+                23.9,
+                24.0,
+                24.7,
+                24.5,
+                24.5
+            ]
+        }
+    },
+    "Sav\u00e8": {
+        "latitude": 8.0,
+        "longitude": 2.5,
+        "generationtime_ms": 0.030517578125,
+        "utc_offset_seconds": 3600,
+        "timezone": "Africa/Porto-Novo",
+        "timezone_abbreviation": "GMT+1",
+        "elevation": 193.0,
+        "daily_units": {
+            "time": "iso8601",
+            "temperature_2m_max": "\u00b0C",
+            "temperature_2m_min": "\u00b0C"
+        },
+        "daily": {
+            "time": [
+                "2026-04-24",
+                "2026-04-25",
+                "2026-04-26",
+                "2026-04-27",
+                "2026-04-28",
+                "2026-04-29",
+                "2026-04-30"
+            ],
+            "temperature_2m_max": [
+                34.5,
+                33.7,
+                33.3,
+                35.5,
+                33.1,
+                32.9,
+                32.5
+            ],
+            "temperature_2m_min": [
+                26.5,
+                25.5,
+                25.4,
+                25.2,
+                25.4,
+                25.8,
+                25.1
+            ]
+        }
+    },
+    "Porto-Novo": {
+        "latitude": 6.5,
+        "longitude": 2.625,
+        "generationtime_ms": 0.03409385681152344,
+        "utc_offset_seconds": 3600,
+        "timezone": "Africa/Porto-Novo",
+        "timezone_abbreviation": "GMT+1",
+        "elevation": 20.0,
+        "daily_units": {
+            "time": "iso8601",
+            "temperature_2m_max": "\u00b0C",
+            "temperature_2m_min": "\u00b0C"
+        },
+        "daily": {
+            "time": [
+                "2026-04-24",
+                "2026-04-25",
+                "2026-04-26",
+                "2026-04-27",
+                "2026-04-28",
+                "2026-04-29",
+                "2026-04-30"
+            ],
+            "temperature_2m_max": [
+                31.4,
+                30.9,
+                30.0,
+                32.5,
+                31.4,
+                29.8,
+                30.9
+            ],
+            "temperature_2m_min": [
+                28.1,
+                26.7,
+                27.8,
+                27.2,
+                28.5,
+                28.0,
+                27.8
+            ]
+        }
+    },
+    "Dan": {
+        "latitude": 36.585308,
+        "longitude": -79.39104,
+        "generationtime_ms": 0.4724264144897461,
+        "utc_offset_seconds": -14400,
+        "timezone": "America/New_York",
+        "timezone_abbreviation": "GMT-4",
+        "elevation": 153.0,
+        "daily_units": {
+            "time": "iso8601",
+            "temperature_2m_max": "\u00b0C",
+            "temperature_2m_min": "\u00b0C"
+        },
+        "daily": {
+            "time": [
+                "2026-04-24",
+                "2026-04-25",
+                "2026-04-26",
+                "2026-04-27",
+                "2026-04-28",
+                "2026-04-29",
+                "2026-04-30"
+            ],
+            "temperature_2m_max": [
+                30.7,
+                29.6,
+                18.4,
+                21.8,
+                20.4,
+                22.5,
+                20.1
+            ],
+            "temperature_2m_min": [
+                8.7,
+                13.1,
+                8.8,
+                5.5,
+                5.7,
+                11.5,
+                9.0
+            ]
+        }
+    },
+    "Natitingou": {
+        "latitude": 10.29877,
+        "longitude": 1.344464,
+        "generationtime_ms": 0.4228353500366211,
+        "utc_offset_seconds": 3600,
+        "timezone": "Africa/Porto-Novo",
+        "timezone_abbreviation": "GMT+1",
+        "elevation": 448.0,
+        "daily_units": {
+            "time": "iso8601",
+            "temperature_2m_max": "\u00b0C",
+            "temperature_2m_min": "\u00b0C"
+        },
+        "daily": {
+            "time": [
+                "2026-04-24",
+                "2026-04-25",
+                "2026-04-26",
+                "2026-04-27",
+                "2026-04-28",
+                "2026-04-29",
+                "2026-04-30"
+            ],
+            "temperature_2m_max": [
+                35.7,
+                34.1,
+                34.7,
+                30.8,
+                33.7,
+                32.6,
+                31.1
+            ],
+            "temperature_2m_min": [
+                25.9,
+                23.5,
+                22.5,
+                23.7,
+                24.4,
+                24.3,
+                24.0
             ]
         }
     }
