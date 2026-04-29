@@ -1,4 +1,5 @@
 import urllib.request
+import urllib.parse
 import json
 from api_base import APIBase
 
@@ -7,8 +8,8 @@ class Meteo(APIBase):
 
     def __init__(self, ville, latitude, longitude):
         super().__init__(ville)
-        self.latitude = latitude
-        self.longitude = longitude
+        self.__latitude = latitude
+        self.__longitude = longitude
         self.donnees = {}
 
 
@@ -23,13 +24,21 @@ class Meteo(APIBase):
     
     def recuperer_donnees(self):
         """Récupère les données météo de l'API Open-Météo."""
-        url  = (
-            f"https://api.open-meteo.com/v1/forecast?" 
-            f"latitude={self.latitude}&longitude={self.longitude}"
-            f"&daily=temperature_2m_max,temperature_2m_min"
-            f"&timezone=auto"
-        )
+        try:
+         
+            url  = (
+                f"https://api.open-meteo.com/v1/forecast?" 
+                f"latitude={self.__latitude}&longitude={self.__longitude}"
+                f"&daily=temperature_2m_max,temperature_2m_min"
+                 f"&timezone=auto"
+            )
 
-        with urllib.request.urlopen(url) as reponse:
-            self.donnees = json.loads(reponse.read())
-        return self.donnees
+            with urllib.request.urlopen(url) as reponse:
+                self.donnees = json.loads(reponse.read())
+            return self.donnees
+        except urllib.error.URLError:
+            print("Erreur : Impossible de se connecter à internet !")
+            return None
+        except Exception as e:
+            print(f"Erreur inattendue : {e}")
+            return None

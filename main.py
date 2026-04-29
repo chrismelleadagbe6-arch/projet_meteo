@@ -5,18 +5,35 @@ from geocodage import Geocodage
 
 def afficher_statistique(ville, donnees):
    """Afficher les statistiques météo d'une ville"""
-   temperatures_max = donnees["daily"]["temperature_2m_max"]
-   temperatures_min = donnees["daily"]["temperature_2m_min"]
+   try:
+   
+       temperatures_max = donnees["daily"]["temperature_2m_max"]
+       temperatures_min = donnees["daily"]["temperature_2m_min"]
 
 
-   temp_max = max(temperatures_max)
-   temp_min = min(temperatures_min)
-   temo_moyenne = sum(temperatures_max)/len(temperatures_max)
+       temp_max = max(temperatures_max)
+       temp_min = min(temperatures_min)
+       temp_moyenne = sum(temperatures_max)/len(temperatures_max)
 
-   print(f"\n===Statistiques météo de {ville} ===")
-   print(f"Température maximale : {temp_max} °C")
-   print(f"Température minimale : {temp_min} °C")
-   print(f"Température moyenne : {temo_moyenne: .1f} °C")
+       print(f"\n===Statistiques météo de {ville} ===")
+       print(f"Température maximale : {temp_max} °C")
+       print(f"Température minimale : {temp_min} °C")
+       print(f"Température moyenne : {temp_moyenne: .1f} °C")
+   
+   except KeyError:
+      print("Erreur : Les données météo sont incomplètes !")
+   except Exception as e:
+      print(f"Erreur inattendue : {e}")
+
+def saisir_coordonnees():
+   """Demende à l'utilisateur d'entrée la latitude et longitude."""
+   try:
+      latitude = float(input("Entrez la latitude : "))
+      longitude = float(input("Entrez la longitude : "))
+      return latitude, longitude 
+   except ValueError:
+      print("Erreur : Priez d'entrer des chiffres valides !")
+      return None, None     
 
 
 
@@ -47,8 +64,9 @@ def main():
        reponse = input("Connaissez-vous la latitude et la longitude de cette ville ? (oui/non) : ")
 
        if reponse.lower() == "oui" :
-          latitude = float(input("Entrez la latitude : "))
-          longitude = float(input("Entrez la longitude : "))
+          latitude, longitude = saisir_coordonnees()
+          if latitude is None:
+             continue 
 
        else:
           print(f"Recherche automatique des coordonnées de {ville} ")
@@ -66,8 +84,11 @@ def main():
        meteo = Meteo(ville, latitude, longitude)
        donnees = meteo.recuperer_donnees()
 
+       if donnees is None:
+          print("Impossible de récupérer les données météo.")
+          continue
+
        #Sauvegarder les données
-       stockage = Stockage()
        stockage.sauvegarder(ville, donnees)
 
        #Afficher les statistiques

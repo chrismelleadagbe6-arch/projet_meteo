@@ -1,0 +1,12 @@
+{
+    "TestVille": {
+        "daily": {
+            "temp\u00e9rature_2m_max": [
+                30.0
+            ],
+            "temp\u00e9rature_2m_min": [
+                20.0
+            ]
+        }
+    }
+}

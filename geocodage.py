@@ -11,19 +11,26 @@ class Geocodage:
 
     def get_coordonnees(self):
         """Retourne la latitude et la longitude d'une ville demandée."""
+        try:
 
-        url = (
-            f"https://geocoding-api.open-meteo.com/v1/search?"
-            f"name={urllib.parse.quote(self.__ville)}&count=1&language=fr&format=json"
-        )
-        with urllib.request.urlopen(url) as reponse:
-            donnees = json.loads(reponse.read())
+            url = (
+               f"https://geocoding-api.open-meteo.com/v1/search?"
+               f"name={urllib.parse.quote(self.__ville)}&count=1&language=fr&format=json"
+            )
+            with urllib.request.urlopen(url) as reponse:
+                 donnees = json.loads(reponse.read())
 
-        if "results" in donnees and len(donnees["results"])>0:
-            resultat = donnees["results"][0]
-            latitude = resultat["latitude"]
-            longitude = resultat["longitude"]
-            return latitude, longitude
-        else:
-            print(f"La ville '{self.__ville}' est inretrouvable.")
+            if "results" in donnees and len(donnees["results"])>0:
+                 resultat = donnees["results"][0]
+                 latitude = resultat["latitude"]
+                 longitude = resultat["longitude"]
+                 return latitude, longitude
+            else:
+                 print(f"La ville '{self.__ville}' est inretrouvable.")
+                 return None, None
+        except urllib.error.URLError:
+            print("Erreur : Impossible de se connecter à internet !")
             return None, None
+        except Exception as e:
+            print(f"Erreur inattendue : {e}")
+            return None, None   
